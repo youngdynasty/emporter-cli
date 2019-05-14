@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A61C080F2279BD3A004A44AB /* EMCreateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A61C080E2279BD3A004A44AB /* EMCreateCommand.m */; };
+		A61FF8442278F12300575076 /* EMVersionCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A61FF8432278F12300575076 /* EMVersionCommand.m */; };
+		A63AAE372279F73C00E1AD74 /* EMServiceCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A63AAE362279F73C00E1AD74 /* EMServiceCommand.m */; };
+		A63AAE3C2279FE5D00E1AD74 /* EMDeleteCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A63AAE3B2279FE5D00E1AD74 /* EMDeleteCommand.m */; };
+		A63AAE3D2279FE7900E1AD74 /* EMCreateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A61C080E2279BD3A004A44AB /* EMCreateCommand.m */; };
+		A63AAE3E2279FE7900E1AD74 /* EMDeleteCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A63AAE3B2279FE5D00E1AD74 /* EMDeleteCommand.m */; };
+		A63AAE3F2279FE7900E1AD74 /* EMServiceCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A63AAE362279F73C00E1AD74 /* EMServiceCommand.m */; };
+		A63AAE402279FE7900E1AD74 /* EMVersionCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A61FF8432278F12300575076 /* EMVersionCommand.m */; };
+		A63AAE43227A00EB00E1AD74 /* EMEditCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A63AAE41227A00EB00E1AD74 /* EMEditCommand.m */; };
+		A63AAE44227A00EB00E1AD74 /* EMEditCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A63AAE41227A00EB00E1AD74 /* EMEditCommand.m */; };
+		A6953C52226CC949001E8837 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953C51226CC949001E8837 /* main.m */; };
+		A6953C85226CC998001E8837 /* libEmporterKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6953C7F226CC975001E8837 /* libEmporterKit.a */; };
+		A6953CB5226FBBD8001E8837 /* EMHelpCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CB4226FBBD8001E8837 /* EMHelpCommand.m */; };
+		A6953CB8226FBBEF001E8837 /* EMMainCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CB7226FBBEF001E8837 /* EMMainCommand.m */; };
+		A6953CBB226FBCFA001E8837 /* EMGetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CBA226FBCFA001E8837 /* EMGetCommand.m */; };
+		A6953CC42270C874001E8837 /* EMUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CC32270C874001E8837 /* EMUtilsTests.m */; };
+		A6953CC72270C891001E8837 /* EMGetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CBA226FBCFA001E8837 /* EMGetCommand.m */; };
+		A6953CC82270C891001E8837 /* EMHelpCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CB4226FBBD8001E8837 /* EMHelpCommand.m */; };
+		A6953CC92270C891001E8837 /* EMMainCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CB7226FBBEF001E8837 /* EMMainCommand.m */; };
+		A6953CCC2270C8E2001E8837 /* libEmporterKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6953C7F226CC975001E8837 /* libEmporterKit.a */; };
+		A6953CD62270EF73001E8837 /* EMListCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CD52270EF73001E8837 /* EMListCommand.m */; };
+		A6953CD72270EF73001E8837 /* EMListCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6953CD52270EF73001E8837 /* EMListCommand.m */; };
+		A6BC596F22745E86001E53A3 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A61FF8362273202900575076 /* libcurses.tbd */; };
+		A6BC597022745E91001E53A3 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A61FF8362273202900575076 /* libcurses.tbd */; };
+		A6BC597322751D95001E53A3 /* EMRunCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BC597222751D95001E53A3 /* EMRunCommand.m */; };
+		A6BC597422760644001E53A3 /* EMRunCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BC597222751D95001E53A3 /* EMRunCommand.m */; };
+		A6D813CF2282D3B40092FE4C /* EMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813CD2282D3B30092FE4C /* EMUtils.m */; };
+		A6D813D02282D3B40092FE4C /* EMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813CD2282D3B30092FE4C /* EMUtils.m */; };
+		A6D813D32282D3D10092FE4C /* EMProcessNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813D22282D3D10092FE4C /* EMProcessNode.m */; };
+		A6D813D42282D3D10092FE4C /* EMProcessNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813D22282D3D10092FE4C /* EMProcessNode.m */; };
+		A6D813D72282D3F80092FE4C /* EMCodeSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813D62282D3F80092FE4C /* EMCodeSignature.m */; };
+		A6D813D82282D3F80092FE4C /* EMCodeSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813D62282D3F80092FE4C /* EMCodeSignature.m */; };
+		A6D813DB2282E5110092FE4C /* EMUpdateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813DA2282E5110092FE4C /* EMUpdateCommand.m */; };
+		A6D813DC2282E5110092FE4C /* EMUpdateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813DA2282E5110092FE4C /* EMUpdateCommand.m */; };
+		A6D813DF2282EE1A0092FE4C /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D813DE2282EE1A0092FE4C /* libbz2.tbd */; };
+		A6D813E2228331FF0092FE4C /* EMUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813E1228331FF0092FE4C /* EMUpdater.m */; };
+		A6D813E3228331FF0092FE4C /* EMUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813E1228331FF0092FE4C /* EMUpdater.m */; };
+		A6D813E6228355D50092FE4C /* EMVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813E5228355D50092FE4C /* EMVersion.m */; };
+		A6D813E7228355D50092FE4C /* EMVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813E5228355D50092FE4C /* EMVersion.m */; };
+		A6D813EA2283562B0092FE4C /* EMUpdateFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813E92283562B0092FE4C /* EMUpdateFeed.m */; };
+		A6D813EB2283562B0092FE4C /* EMUpdateFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813E92283562B0092FE4C /* EMUpdateFeed.m */; };
+		A6D813EE228358DA0092FE4C /* EMUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813ED228358DA0092FE4C /* EMUpdate.m */; };
+		A6D813EF228358DA0092FE4C /* EMUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813ED228358DA0092FE4C /* EMUpdate.m */; };
+		A6D813F1228386350092FE4C /* Data in Resources */ = {isa = PBXBuildFile; fileRef = A6D813F0228386350092FE4C /* Data */; };
+		A6D813F32283867A0092FE4C /* EMUpdateFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813F22283867A0092FE4C /* EMUpdateFeedTests.m */; };
+		A6D813F722849BD10092FE4C /* EMUpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813F622849BD10092FE4C /* EMUpdaterTests.m */; };
+		A6D813FB2284AB670092FE4C /* EMCodeSignatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813FA2284AB670092FE4C /* EMCodeSignatureTests.m */; };
+		A6D813FF2284C17F0092FE4C /* EMSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813FE2284C17F0092FE4C /* EMSpinner.m */; };
+		A6D814002284C17F0092FE4C /* EMSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D813FE2284C17F0092FE4C /* EMSpinner.m */; };
+		A6D814A322886EED0092FE4C /* libYDCommandKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D8149B22886CF40092FE4C /* libYDCommandKit.a */; };
+		A6D814A622886FB90092FE4C /* EMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D814A422886FB90092FE4C /* EMWindow.m */; };
+		A6D814A722886FB90092FE4C /* EMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D814A422886FB90092FE4C /* EMWindow.m */; };
+		A6D814AB228880080092FE4C /* libYDCommandKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D8149B22886CF40092FE4C /* libYDCommandKit.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6953C7E226CC975001E8837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6FD1774224AB1DA00F3CB9B;
+			remoteInfo = EmporterKit;
+		};
+		A6953C80226CC975001E8837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6FD1789224AB39800F3CB9B;
+			remoteInfo = EmporterKitTests;
+		};
+		A6953C82226CC975001E8837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6FD1799224AB49500F3CB9B;
+			remoteInfo = EmporterKitTestHost;
+		};
+		A6953C86226CC99F001E8837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A6FD1773224AB1DA00F3CB9B;
+			remoteInfo = EmporterKit;
+		};
+		A6953CCA2270C8DC001E8837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A6FD1773224AB1DA00F3CB9B;
+			remoteInfo = EmporterKit;
+		};
+		A6D8149A22886CF40092FE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6D814112288572C0092FE4C;
+			remoteInfo = YDCommandKit;
+		};
+		A6D8149C22886CF40092FE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6D81443228858190092FE4C;
+			remoteInfo = YDCommandKitTests;
+		};
+		A6D814A122886ECE0092FE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A6D814102288572C0092FE4C;
+			remoteInfo = YDCommandKit;
+		};
+		A6D814A922887FFE0092FE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A6D814102288572C0092FE4C;
+			remoteInfo = YDCommandKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A6953C4C226CC949001E8837 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A61C080D2279BD3A004A44AB /* EMCreateCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMCreateCommand.h; sourceTree = "<group>"; };
+		A61C080E2279BD3A004A44AB /* EMCreateCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMCreateCommand.m; sourceTree = "<group>"; };
+		A61FF8362273202900575076 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
+		A61FF83A2273351400575076 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
+		A61FF83F2278F0E600575076 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A61FF8422278F12300575076 /* EMVersionCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMVersionCommand.h; sourceTree = "<group>"; };
+		A61FF8432278F12300575076 /* EMVersionCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMVersionCommand.m; sourceTree = "<group>"; };
+		A63AAE352279F73C00E1AD74 /* EMServiceCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMServiceCommand.h; sourceTree = "<group>"; };
+		A63AAE362279F73C00E1AD74 /* EMServiceCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMServiceCommand.m; sourceTree = "<group>"; };
+		A63AAE3A2279FE5D00E1AD74 /* EMDeleteCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMDeleteCommand.h; sourceTree = "<group>"; };
+		A63AAE3B2279FE5D00E1AD74 /* EMDeleteCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMDeleteCommand.m; sourceTree = "<group>"; };
+		A63AAE41227A00EB00E1AD74 /* EMEditCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMEditCommand.m; sourceTree = "<group>"; };
+		A63AAE42227A00EB00E1AD74 /* EMEditCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEditCommand.h; sourceTree = "<group>"; };
+		A6953C4E226CC949001E8837 /* emporter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = emporter; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6953C51226CC949001E8837 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmporterKit.xcodeproj; path = EmporterKit/EmporterKit.xcodeproj; sourceTree = "<group>"; };
+		A6953CB3226FBBD8001E8837 /* EMHelpCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMHelpCommand.h; sourceTree = "<group>"; };
+		A6953CB4226FBBD8001E8837 /* EMHelpCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMHelpCommand.m; sourceTree = "<group>"; };
+		A6953CB6226FBBEF001E8837 /* EMMainCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMMainCommand.h; sourceTree = "<group>"; };
+		A6953CB7226FBBEF001E8837 /* EMMainCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMMainCommand.m; sourceTree = "<group>"; };
+		A6953CB9226FBCFA001E8837 /* EMGetCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMGetCommand.h; sourceTree = "<group>"; };
+		A6953CBA226FBCFA001E8837 /* EMGetCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMGetCommand.m; sourceTree = "<group>"; };
+		A6953CC32270C874001E8837 /* EMUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUtilsTests.m; sourceTree = "<group>"; };
+		A6953CD42270EF73001E8837 /* EMListCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMListCommand.h; sourceTree = "<group>"; };
+		A6953CD52270EF73001E8837 /* EMListCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMListCommand.m; sourceTree = "<group>"; };
+		A6BC597122751D95001E53A3 /* EMRunCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMRunCommand.h; sourceTree = "<group>"; };
+		A6BC597222751D95001E53A3 /* EMRunCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMRunCommand.m; sourceTree = "<group>"; };
+		A6D813CD2282D3B30092FE4C /* EMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMUtils.m; sourceTree = "<group>"; };
+		A6D813CE2282D3B30092FE4C /* EMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMUtils.h; sourceTree = "<group>"; };
+		A6D813D12282D3D10092FE4C /* EMProcessNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMProcessNode.h; sourceTree = "<group>"; };
+		A6D813D22282D3D10092FE4C /* EMProcessNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMProcessNode.m; sourceTree = "<group>"; };
+		A6D813D52282D3F80092FE4C /* EMCodeSignature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMCodeSignature.h; sourceTree = "<group>"; };
+		A6D813D62282D3F80092FE4C /* EMCodeSignature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMCodeSignature.m; sourceTree = "<group>"; };
+		A6D813D92282E5110092FE4C /* EMUpdateCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMUpdateCommand.h; sourceTree = "<group>"; };
+		A6D813DA2282E5110092FE4C /* EMUpdateCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUpdateCommand.m; sourceTree = "<group>"; };
+		A6D813DE2282EE1A0092FE4C /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		A6D813E0228331FF0092FE4C /* EMUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMUpdater.h; sourceTree = "<group>"; };
+		A6D813E1228331FF0092FE4C /* EMUpdater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUpdater.m; sourceTree = "<group>"; };
+		A6D813E4228355D50092FE4C /* EMVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMVersion.h; sourceTree = "<group>"; };
+		A6D813E5228355D50092FE4C /* EMVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMVersion.m; sourceTree = "<group>"; };
+		A6D813E82283562B0092FE4C /* EMUpdateFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMUpdateFeed.h; sourceTree = "<group>"; };
+		A6D813E92283562B0092FE4C /* EMUpdateFeed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUpdateFeed.m; sourceTree = "<group>"; };
+		A6D813EC228358DA0092FE4C /* EMUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMUpdate.h; sourceTree = "<group>"; };
+		A6D813ED228358DA0092FE4C /* EMUpdate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUpdate.m; sourceTree = "<group>"; };
+		A6D813F0228386350092FE4C /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		A6D813F22283867A0092FE4C /* EMUpdateFeedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUpdateFeedTests.m; sourceTree = "<group>"; };
+		A6D813F622849BD10092FE4C /* EMUpdaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMUpdaterTests.m; sourceTree = "<group>"; };
+		A6D813FA2284AB670092FE4C /* EMCodeSignatureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMCodeSignatureTests.m; sourceTree = "<group>"; };
+		A6D813FD2284C17F0092FE4C /* EMSpinner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMSpinner.h; sourceTree = "<group>"; };
+		A6D813FE2284C17F0092FE4C /* EMSpinner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMSpinner.m; sourceTree = "<group>"; };
+		A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YDCommandKit.xcodeproj; path = YDCommandKit/YDCommandKit.xcodeproj; sourceTree = "<group>"; };
+		A6D814A422886FB90092FE4C /* EMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMWindow.m; sourceTree = "<group>"; };
+		A6D814A522886FB90092FE4C /* EMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWindow.h; sourceTree = "<group>"; };
+		A6DAE756226CEC8C00AFF55E /* emporter-cli-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "emporter-cli-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6DAE75A226CEC8C00AFF55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6953C4B226CC949001E8837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D814A322886EED0092FE4C /* libYDCommandKit.a in Frameworks */,
+				A6D813DF2282EE1A0092FE4C /* libbz2.tbd in Frameworks */,
+				A6BC597022745E91001E53A3 /* libcurses.tbd in Frameworks */,
+				A6953C85226CC998001E8837 /* libEmporterKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DAE753226CEC8C00AFF55E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D814AB228880080092FE4C /* libYDCommandKit.a in Frameworks */,
+				A6BC596F22745E86001E53A3 /* libcurses.tbd in Frameworks */,
+				A6953CCC2270C8E2001E8837 /* libEmporterKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6953C45226CC949001E8837 = {
+			isa = PBXGroup;
+			children = (
+				A6953C50226CC949001E8837 /* emporter-cli */,
+				A6953C58226CC970001E8837 /* Vendor */,
+				A6DAE757226CEC8C00AFF55E /* Tests */,
+				A6953C4F226CC949001E8837 /* Products */,
+				A6953C84226CC998001E8837 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A6953C4F226CC949001E8837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6953C4E226CC949001E8837 /* emporter */,
+				A6DAE756226CEC8C00AFF55E /* emporter-cli-tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6953C50226CC949001E8837 /* emporter-cli */ = {
+			isa = PBXGroup;
+			children = (
+				A6D813CC2282D3B30092FE4C /* Support */,
+				A61C080D2279BD3A004A44AB /* EMCreateCommand.h */,
+				A61C080E2279BD3A004A44AB /* EMCreateCommand.m */,
+				A63AAE3A2279FE5D00E1AD74 /* EMDeleteCommand.h */,
+				A63AAE3B2279FE5D00E1AD74 /* EMDeleteCommand.m */,
+				A63AAE42227A00EB00E1AD74 /* EMEditCommand.h */,
+				A63AAE41227A00EB00E1AD74 /* EMEditCommand.m */,
+				A6953CB9226FBCFA001E8837 /* EMGetCommand.h */,
+				A6953CBA226FBCFA001E8837 /* EMGetCommand.m */,
+				A6953CB3226FBBD8001E8837 /* EMHelpCommand.h */,
+				A6953CB4226FBBD8001E8837 /* EMHelpCommand.m */,
+				A6953CD42270EF73001E8837 /* EMListCommand.h */,
+				A6953CD52270EF73001E8837 /* EMListCommand.m */,
+				A6953CB6226FBBEF001E8837 /* EMMainCommand.h */,
+				A6953CB7226FBBEF001E8837 /* EMMainCommand.m */,
+				A6BC597122751D95001E53A3 /* EMRunCommand.h */,
+				A6BC597222751D95001E53A3 /* EMRunCommand.m */,
+				A63AAE352279F73C00E1AD74 /* EMServiceCommand.h */,
+				A63AAE362279F73C00E1AD74 /* EMServiceCommand.m */,
+				A6D813D92282E5110092FE4C /* EMUpdateCommand.h */,
+				A6D813DA2282E5110092FE4C /* EMUpdateCommand.m */,
+				A61FF8422278F12300575076 /* EMVersionCommand.h */,
+				A61FF8432278F12300575076 /* EMVersionCommand.m */,
+				A6953C51226CC949001E8837 /* main.m */,
+			);
+			path = "emporter-cli";
+			sourceTree = "<group>";
+		};
+		A6953C58226CC970001E8837 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */,
+				A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A6953C79226CC975001E8837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6953C7F226CC975001E8837 /* libEmporterKit.a */,
+				A6953C81226CC975001E8837 /* EmporterKitTests.xctest */,
+				A6953C83226CC975001E8837 /* EmporterKitTestHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6953C84226CC998001E8837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6D813DE2282EE1A0092FE4C /* libbz2.tbd */,
+				A61FF83A2273351400575076 /* libncurses.5.4.tbd */,
+				A61FF8362273202900575076 /* libcurses.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6D813CC2282D3B30092FE4C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A6D813D12282D3D10092FE4C /* EMProcessNode.h */,
+				A6D813D22282D3D10092FE4C /* EMProcessNode.m */,
+				A6D813D52282D3F80092FE4C /* EMCodeSignature.h */,
+				A6D813D62282D3F80092FE4C /* EMCodeSignature.m */,
+				A6D813FD2284C17F0092FE4C /* EMSpinner.h */,
+				A6D813FE2284C17F0092FE4C /* EMSpinner.m */,
+				A6D813EC228358DA0092FE4C /* EMUpdate.h */,
+				A6D813ED228358DA0092FE4C /* EMUpdate.m */,
+				A6D813E82283562B0092FE4C /* EMUpdateFeed.h */,
+				A6D813E92283562B0092FE4C /* EMUpdateFeed.m */,
+				A6D813E0228331FF0092FE4C /* EMUpdater.h */,
+				A6D813E1228331FF0092FE4C /* EMUpdater.m */,
+				A6D813CE2282D3B30092FE4C /* EMUtils.h */,
+				A6D813CD2282D3B30092FE4C /* EMUtils.m */,
+				A6D813E4228355D50092FE4C /* EMVersion.h */,
+				A6D813E5228355D50092FE4C /* EMVersion.m */,
+				A6D814A522886FB90092FE4C /* EMWindow.h */,
+				A6D814A422886FB90092FE4C /* EMWindow.m */,
+				A61FF83F2278F0E600575076 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A6D8149622886CF40092FE4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6D8149B22886CF40092FE4C /* libYDCommandKit.a */,
+				A6D8149D22886CF40092FE4C /* YDCommandKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6DAE757226CEC8C00AFF55E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A6D813F0228386350092FE4C /* Data */,
+				A6D813FA2284AB670092FE4C /* EMCodeSignatureTests.m */,
+				A6953CC32270C874001E8837 /* EMUtilsTests.m */,
+				A6D813F22283867A0092FE4C /* EMUpdateFeedTests.m */,
+				A6D813F622849BD10092FE4C /* EMUpdaterTests.m */,
+				A6DAE75A226CEC8C00AFF55E /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6953C4D226CC949001E8837 /* emporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6953C55226CC949001E8837 /* Build configuration list for PBXNativeTarget "emporter" */;
+			buildPhases = (
+				A6953C4A226CC949001E8837 /* Sources */,
+				A6953C4B226CC949001E8837 /* Frameworks */,
+				A6953C4C226CC949001E8837 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6D814A222886ECE0092FE4C /* PBXTargetDependency */,
+				A6953C87226CC99F001E8837 /* PBXTargetDependency */,
+			);
+			name = emporter;
+			productName = "emporter-cli";
+			productReference = A6953C4E226CC949001E8837 /* emporter */;
+			productType = "com.apple.product-type.tool";
+		};
+		A6DAE755226CEC8C00AFF55E /* emporter-cli-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6DAE764226CEC8C00AFF55E /* Build configuration list for PBXNativeTarget "emporter-cli-tests" */;
+			buildPhases = (
+				A6DAE752226CEC8C00AFF55E /* Sources */,
+				A6DAE753226CEC8C00AFF55E /* Frameworks */,
+				A6DAE754226CEC8C00AFF55E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6D814AA22887FFE0092FE4C /* PBXTargetDependency */,
+				A6953CCB2270C8DC001E8837 /* PBXTargetDependency */,
+			);
+			name = "emporter-cli-tests";
+			productName = "emporter-cli-tests";
+			productReference = A6DAE756226CEC8C00AFF55E /* emporter-cli-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6953C46226CC949001E8837 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Young Dynasty";
+				TargetAttributes = {
+					A6953C4D226CC949001E8837 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					A6DAE755226CEC8C00AFF55E = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = A6953C49226CC949001E8837 /* Build configuration list for PBXProject "emporter-cli" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A6953C45226CC949001E8837;
+			productRefGroup = A6953C4F226CC949001E8837 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A6953C79226CC975001E8837 /* Products */;
+					ProjectRef = A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */;
+				},
+				{
+					ProductGroup = A6D8149622886CF40092FE4C /* Products */;
+					ProjectRef = A6D8149522886CF40092FE4C /* YDCommandKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A6953C4D226CC949001E8837 /* emporter */,
+				A6DAE755226CEC8C00AFF55E /* emporter-cli-tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A6953C7F226CC975001E8837 /* libEmporterKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEmporterKit.a;
+			remoteRef = A6953C7E226CC975001E8837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6953C81226CC975001E8837 /* EmporterKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EmporterKitTests.xctest;
+			remoteRef = A6953C80226CC975001E8837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6953C83226CC975001E8837 /* EmporterKitTestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = EmporterKitTestHost.app;
+			remoteRef = A6953C82226CC975001E8837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6D8149B22886CF40092FE4C /* libYDCommandKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYDCommandKit.a;
+			remoteRef = A6D8149A22886CF40092FE4C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6D8149D22886CF40092FE4C /* YDCommandKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = YDCommandKitTests.xctest;
+			remoteRef = A6D8149C22886CF40092FE4C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6DAE754226CEC8C00AFF55E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D813F1228386350092FE4C /* Data in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6953C4A226CC949001E8837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63AAE3C2279FE5D00E1AD74 /* EMDeleteCommand.m in Sources */,
+				A6953CBB226FBCFA001E8837 /* EMGetCommand.m in Sources */,
+				A61C080F2279BD3A004A44AB /* EMCreateCommand.m in Sources */,
+				A6953CD62270EF73001E8837 /* EMListCommand.m in Sources */,
+				A6D813DB2282E5110092FE4C /* EMUpdateCommand.m in Sources */,
+				A6D813FF2284C17F0092FE4C /* EMSpinner.m in Sources */,
+				A6D814A622886FB90092FE4C /* EMWindow.m in Sources */,
+				A6D813CF2282D3B40092FE4C /* EMUtils.m in Sources */,
+				A6953CB8226FBBEF001E8837 /* EMMainCommand.m in Sources */,
+				A6D813D32282D3D10092FE4C /* EMProcessNode.m in Sources */,
+				A6BC597322751D95001E53A3 /* EMRunCommand.m in Sources */,
+				A6953CB5226FBBD8001E8837 /* EMHelpCommand.m in Sources */,
+				A61FF8442278F12300575076 /* EMVersionCommand.m in Sources */,
+				A6D813EE228358DA0092FE4C /* EMUpdate.m in Sources */,
+				A6D813D72282D3F80092FE4C /* EMCodeSignature.m in Sources */,
+				A6D813E2228331FF0092FE4C /* EMUpdater.m in Sources */,
+				A63AAE43227A00EB00E1AD74 /* EMEditCommand.m in Sources */,
+				A6D813EA2283562B0092FE4C /* EMUpdateFeed.m in Sources */,
+				A6953C52226CC949001E8837 /* main.m in Sources */,
+				A6D813E6228355D50092FE4C /* EMVersion.m in Sources */,
+				A63AAE372279F73C00E1AD74 /* EMServiceCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DAE752226CEC8C00AFF55E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D813FB2284AB670092FE4C /* EMCodeSignatureTests.m in Sources */,
+				A63AAE402279FE7900E1AD74 /* EMVersionCommand.m in Sources */,
+				A6D813F722849BD10092FE4C /* EMUpdaterTests.m in Sources */,
+				A6D813F32283867A0092FE4C /* EMUpdateFeedTests.m in Sources */,
+				A6D813DC2282E5110092FE4C /* EMUpdateCommand.m in Sources */,
+				A63AAE3F2279FE7900E1AD74 /* EMServiceCommand.m in Sources */,
+				A63AAE3D2279FE7900E1AD74 /* EMCreateCommand.m in Sources */,
+				A6953CD72270EF73001E8837 /* EMListCommand.m in Sources */,
+				A63AAE44227A00EB00E1AD74 /* EMEditCommand.m in Sources */,
+				A6D813D82282D3F80092FE4C /* EMCodeSignature.m in Sources */,
+				A63AAE3E2279FE7900E1AD74 /* EMDeleteCommand.m in Sources */,
+				A6D814002284C17F0092FE4C /* EMSpinner.m in Sources */,
+				A6D813E3228331FF0092FE4C /* EMUpdater.m in Sources */,
+				A6D813E7228355D50092FE4C /* EMVersion.m in Sources */,
+				A6953CC72270C891001E8837 /* EMGetCommand.m in Sources */,
+				A6D814A722886FB90092FE4C /* EMWindow.m in Sources */,
+				A6953CC92270C891001E8837 /* EMMainCommand.m in Sources */,
+				A6953CC82270C891001E8837 /* EMHelpCommand.m in Sources */,
+				A6953CC42270C874001E8837 /* EMUtilsTests.m in Sources */,
+				A6BC597422760644001E53A3 /* EMRunCommand.m in Sources */,
+				A6D813D42282D3D10092FE4C /* EMProcessNode.m in Sources */,
+				A6D813EB2283562B0092FE4C /* EMUpdateFeed.m in Sources */,
+				A6D813EF228358DA0092FE4C /* EMUpdate.m in Sources */,
+				A6D813D02282D3B40092FE4C /* EMUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6953C87226CC99F001E8837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmporterKit;
+			targetProxy = A6953C86226CC99F001E8837 /* PBXContainerItemProxy */;
+		};
+		A6953CCB2270C8DC001E8837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmporterKit;
+			targetProxy = A6953CCA2270C8DC001E8837 /* PBXContainerItemProxy */;
+		};
+		A6D814A222886ECE0092FE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YDCommandKit;
+			targetProxy = A6D814A122886ECE0092FE4C /* PBXContainerItemProxy */;
+		};
+		A6D814AA22887FFE0092FE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YDCommandKit;
+			targetProxy = A6D814A922887FFE0092FE4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A6953C53226CC949001E8837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A6953C54226CC949001E8837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A6953C56226CC949001E8837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = EEQTQC5N2L;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = "Vendor/**";
+				INFOPLIST_FILE = "$(SRCROOT)/emporter-cli/Support/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngdynasty.emporter.cli;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A6953C57226CC949001E8837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = EEQTQC5N2L;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = "Vendor/**";
+				INFOPLIST_FILE = "$(SRCROOT)/emporter-cli/Support/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = net.youngdynasty.emporter.cli;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A6DAE75B226CEC8C00AFF55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EEQTQC5N2L;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngdynasty.emporter-cli-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Vendor/**";
+			};
+			name = Debug;
+		};
+		A6DAE75C226CEC8C00AFF55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EEQTQC5N2L;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.youngdynasty.emporter-cli-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Vendor/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6953C49226CC949001E8837 /* Build configuration list for PBXProject "emporter-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6953C53226CC949001E8837 /* Debug */,
+				A6953C54226CC949001E8837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6953C55226CC949001E8837 /* Build configuration list for PBXNativeTarget "emporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6953C56226CC949001E8837 /* Debug */,
+				A6953C57226CC949001E8837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6DAE764226CEC8C00AFF55E /* Build configuration list for PBXNativeTarget "emporter-cli-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6DAE75B226CEC8C00AFF55E /* Debug */,
+				A6DAE75C226CEC8C00AFF55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6953C46226CC949001E8837 /* Project object */;
+}

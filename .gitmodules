@@ -1,0 +1,6 @@
+[submodule "Vendor/EmporterKit"]
+	path = Vendor/EmporterKit
+	url = https://github.com/youngdynasty/EmporterKit
+[submodule "Vendor/YDCommandKit"]
+	path = Vendor/YDCommandKit
+	url = https://github.com/youngdynasty/YDCommandKit
