@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-gui-script minSpecVersion="2">
+	<title>Emporter CLI</title>
+	<organization>net.youngdynasty</organization>
+    <allowed-os-versions>
+        <os-version min="10.13.2" />
+    </allowed-os-versions>
+	<domains enable_anywhere="false" enable_localSystem="true"/>
+	<options customize="never" />
+	<pkg-ref id="net.youngdynasty.emporter-cli">emporter.pkg</pkg-ref>
+	<choices-outline>
+		<line choice="net.youngdynasty.emporter-cli"/>
+	</choices-outline>
+	<choice id="net.youngdynasty.emporter-cli" visible="false" title="Emporter CLI" description="">
+		<pkg-ref id="net.youngdynasty.emporter-cli"/>
+	</choice>
+</installer-gui-script>
