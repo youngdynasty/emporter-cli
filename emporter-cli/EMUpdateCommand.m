@@ -61,7 +61,7 @@
             return EMBlockRunLoopStop();
         }
 
-        EMUpdate *latestUpdate = updates.lastObject;
+        EMUpdate *latestUpdate = updates.firstObject;
         
         if (latestUpdate == nil || EMVersionCompare(latestUpdate.version, EMVersionEmbedded()) != NSOrderedDescending) {
             if (main.outputJSON) {
