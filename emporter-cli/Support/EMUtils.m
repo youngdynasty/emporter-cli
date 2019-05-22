@@ -268,6 +268,8 @@ EMSourceType EMSourceTypeGuess(NSString *str) {
             return EMSourceTypeURL;
         } else if ([urlScheme isEqualToString:@"file"]) {
             return EMSourceTypeDirectory;
+        } else if ([url.host ?: @"" containsString:@".emporter."]) {
+            return EMSourceTypeURL;
         }
     }
     

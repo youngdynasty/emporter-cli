@@ -74,19 +74,23 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "--json"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "run"
-            isEnabled = "NO">
+            argument = "get"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-q"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "update"
+            argument = "https://splash-u68g.emporter.eu"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "update"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

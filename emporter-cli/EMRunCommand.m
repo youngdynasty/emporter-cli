@@ -53,7 +53,7 @@
                     strongSelf.filter = [Emporter tunnelPredicateForPort:@([input integerValue])];
                     break;
                 default:
-                    strongSelf.filter = [Emporter tunnelPredicateForSourceURL:EMSourceURLFromString(input, strongSelf.filterType)];
+                    strongSelf.filter = [Emporter tunnelPredicateForURL:EMSourceURLFromString(input, strongSelf.filterType)];
                     break;
             }
         }
