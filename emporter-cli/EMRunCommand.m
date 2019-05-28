@@ -273,6 +273,23 @@
         }
     };
     
+    [observers addObject:EMNotificationObserverBlock(EmporterDidAddTunnelNotification, _emporter, ^(NSNotification *note) {
+        NSString *tunnelId = note.userInfo[EmporterTunnelIdentifierUserInfoKey];
+        if (!isWatchingTunnelId(tunnelId)) {
+            return;
+        }
+        
+        EmporterTunnel *tunnel = [self.emporter tunnelWithIdentifier:tunnelId error:nil];
+        tunnel = tunnel ? [tunnel get] : nil;
+        
+        NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:tunnelId, @"_id", nil];
+        if (tunnel != nil) {
+            [data addEntriesFromDictionary:EMJSONObjectForTunnel(tunnel, YES)];
+        }
+        
+        [YDStandardOut appendJSONObject:@{@"event": @"url.added", @"data": data }];
+    })];
+    
     [observers addObject:EMNotificationObserverBlock(EmporterDidRemoveTunnelNotification, _emporter, ^(NSNotification *note) {
         NSString *tunnelId = note.userInfo[EmporterTunnelIdentifierUserInfoKey];
         if (!isWatchingTunnelId(tunnelId)) {
