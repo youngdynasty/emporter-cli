@@ -53,7 +53,7 @@
     
     if (main.outputJSON) {
         id cliData = @{ @"build": @(cliBuildNumber), @"version": cliVersion ?: [NSNull null]};
-        id appData = @{ @"build": appVersion ? @(app.buildNumber) : [NSNull null], @"version": appVersion ?: [NSNull null]};
+        id appData = @{ @"build": appVersion ? @(app.buildNumber) : [NSNull null], @"version": appVersion ?: [NSNull null], @"url": Emporter.appStoreURL.absoluteString };
         id apiData = @{ @"version": apiVersion ?: [NSNull null]};
         
         [YDStandardOut appendJSONObject:@{@"cli": cliData, @"app": appData, @"api": apiData}];
