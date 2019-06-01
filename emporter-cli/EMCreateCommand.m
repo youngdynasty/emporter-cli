@@ -22,6 +22,8 @@
 
 @implementation EMCreateCommand {
     BOOL _force;
+    BOOL _noAttach;
+    BOOL _quiet;
     
     NSString *_authUsername;
     NSString *_authPassword;
@@ -51,7 +53,9 @@
                        [YDCommandVariable string:&_name withName:@"--name" usage:@"Create a URL based on the given name"],
                        [YDCommandVariable boolean:&_isTemporary withName:@"--rm" usage:@"Delete URL on exit if it didn't already exist"],
                        [YDCommandVariable boolean:&_keepOpen withName:@"--keep-open" usage:@"Keep Emporter open after exit if it was launched to create a URL"],
-                       
+                       [[YDCommandVariable boolean:&_noAttach withName:@"-x" usage:@"Do not attach a new session on success"] variableWithAlias:@"--no-attach"],
+                       [[YDCommandVariable boolean:&_quiet withName:@"-q" usage:@"Only print ID upon success"] variableWithAlias:@"--quiet"],
+
                        [YDCommandVariable string:&_indexFile withName:@"--dir-index" usage:@"Default file to serve in directory (index.html) (directory URLs only)"],
                        [YDCommandVariable booleanNumber:&_browsingEnabled withName:@"--dir-browsing" usage:@"Enable or disable directory browsing (if index file is not found)"],
                        [YDCommandVariable booleanNumber:&_liveReloadEnabled withName:@"--live-reload" usage:@"Enable or disable live reload (directory URLs only)"],
@@ -104,9 +108,18 @@
         }
     }
     
-    // Mount if there was not an existing error
     if (exitCode == YDCommandReturnCodeOK && tunnel != nil) {
-        exitCode = [self _mountTunnel:tunnel];
+        if (_quiet) {
+            if (main.outputJSON) {
+                [YDStandardOut appendJSONObject:@{@"_id": tunnel.id ?: [NSNull null] }];
+            } else {
+                [YDStandardOut appendFormat:@"%@\n", tunnel.id];
+            }
+        } else if (_noAttach) {
+            exitCode = [[self.root commandWithPath:@"get"] executeWithArguments:@[tunnel.id]];
+        } else {
+            exitCode = [self _mountTunnel:tunnel];
+        }
     }
     
     // Remove tunnel if needed
