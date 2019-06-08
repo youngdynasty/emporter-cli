@@ -7,6 +7,7 @@ PLIST_SET = @plutil -replace "$(1)" -string "$(2)" "$(PLIST)"
 PLIST_VERSION=$(call PLIST_GET,CFBundleShortVersionString)
 PLIST_BUILD_N=$(call PLIST_GET,CFBundleVersion)
 
+KEYCHAIN_APPLE=emporter-cli-apple
 KEYCHAIN_GITHUB=emporter-cli-gh
 
 KEYCHAIN_KEY = $(shell security -q find-generic-password -s "$(1)" 2> /dev/null | grep acct | cut -d '=' -f 2)
@@ -50,9 +51,9 @@ clean:
 # ---------------------------------------------------------------------------------------------------
 # Release / Deployment
 
-# Build and sign for distribution, verify via the install script, and open the result
+# Build and sign for distribution, verify via the install script, and upload to notary
 .PHONY: release
-release: github-creds
+release: apple-creds
 release: build
 release: PACKAGE_TARBALL=emporter.tar.gz
 release: PACKAGE_DYSM=emporter.dSYM.tar.gz
@@ -60,7 +61,9 @@ release:
 	@rm -fr build/release && mkdir -p build/release
 
 	@echo "==> Signing for distribution..."
-	@cd build && codesign -fs "Developer ID Application: Young Dynasty" emporter
+	@codesign -fs "Developer ID Application: Young Dynasty" \
+		--options runtime --timestamp --entitlements emporter-cli/Support/CLI.entitlements \
+		 build/emporter
 
 	@echo "==> Building package..."
 	$(eval WORK_DIR=$(shell mktemp -d))
@@ -72,7 +75,6 @@ release:
 			--root "$(WORK_DIR)/contents" \
 			--ownership preserve \
 			--identifier net.youngdynasty.emporter-cli \
-			--sign "Developer ID Installer: Young Dynasty" \
 			--version $(PLIST_VERSION) \
 			$(WORK_DIR)/emporter.pkg \
 		&& productbuild  \
@@ -93,9 +95,18 @@ release:
 	@echo "==> Testing tarball install script..."
 	@PACKAGE=build/release/emporter.tar.gz sh ./Scripts/install-tarball.sh
 
+	@echo "==> Uploading to notary..."
+	@xcrun altool --notarize-app --username $(APPLE_USERNAME) --password $(APPLE_PASSWORD) \
+		--primary-bundle-id net.youngdynasty.emporter-cli --file "build/release/emporter.pkg"
+
+.PHONY:
+release-draft:
+release-draft: github-creds
+	@echo "==> Stapling package..."
+	@xcrun stapler staple build/release/emporter.pkg
+
 	@echo "==> Uploading..."
 	@GITHUB_CREDS=$(GITHUB_CREDS) sh Scripts/release.sh $(PLIST_VERSION) build/release/*
-
 
 .PHONY: deploy
 deploy:
@@ -122,6 +133,11 @@ github-creds-store: .check-creds-args
 	$(call KEYCHAIN_DELETE,$(KEYCHAIN_GITHUB),$(KEY))
 	$(call KEYCHAIN_STORE,$(KEYCHAIN_GITHUB),$(KEY),$(SECRET))
 	
+.PHONY: apple-creds-store
+apple-creds-store: .check-creds-args
+	$(call KEYCHAIN_DELETE,$(KEYCHAIN_APPLE),$(KEY))
+	$(call KEYCHAIN_STORE,$(KEYCHAIN_APPLE),$(KEY),$(SECRET))
+	
 .PHONY: github-creds
 github-creds: KEY=$(call KEYCHAIN_KEY,$(KEYCHAIN_GITHUB))
 github-creds: SECRET=$(call KEYCHAIN_SECRET,$(KEYCHAIN_GITHUB))
@@ -129,3 +145,12 @@ github-creds:
 	@if [ -z "$(KEY)" ] || [ -z "$(SECRET)" ]; then echo "*** Missing GitHub credentials. Run 'make github-creds-store' to continue."; exit 1; fi 
 	
 	$(eval GITHUB_CREDS=$(KEY):$(SECRET))
+
+.PHONY: apple-creds
+apple-creds: KEY=$(call KEYCHAIN_KEY,$(KEYCHAIN_APPLE))
+apple-creds: SECRET=$(call KEYCHAIN_SECRET,$(KEYCHAIN_APPLE))
+apple-creds:
+	@if [ -z "$(KEY)" ] || [ -z "$(SECRET)" ]; then echo "*** Missing Apple credentials. Run 'make apple-creds-store' to continue."; exit 1; fi 
+	
+	$(eval APPLE_USERNAME=$(KEY))
+	$(eval APPLE_PASSWORD=$(SECRET))
