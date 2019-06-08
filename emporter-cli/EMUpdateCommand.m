@@ -149,7 +149,7 @@
                         [spinner stopSpinning:YES];
                         
                         if (error == nil) {
-                            EMOutputSuccess(YDStandardOut, @"Updated complete!\n");
+                            EMOutputSuccess(YDStandardOut, @"Update complete!\n");
                         } else {
                             EMOutputError(YDStandardOut, @"Could not apply update\n    ");
                             [YDStandardError appendFormat:@"%@\n", error.localizedDescription];
