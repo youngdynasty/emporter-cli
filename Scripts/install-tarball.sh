@@ -19,7 +19,7 @@ set -e
 # Package code signatures are verified before installation
 PACKAGE_ID=net.youngdynasty.emporter.cli
 PACKAGE_TEAM_ID=EEQTQC5N2L
-PACKAGE_VERSION=0.1.1
+PACKAGE_VERSION=0.1.2
 PACKAGE_URL=https://github.com/youngdynasty/emporter-cli/releases/download/v$PACKAGE_VERSION/emporter.tar.gz
 
 # Optional overrides
