@@ -154,6 +154,7 @@
 		A63AAE3B2279FE5D00E1AD74 /* EMDeleteCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMDeleteCommand.m; sourceTree = "<group>"; };
 		A63AAE41227A00EB00E1AD74 /* EMEditCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMEditCommand.m; sourceTree = "<group>"; };
 		A63AAE42227A00EB00E1AD74 /* EMEditCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEditCommand.h; sourceTree = "<group>"; };
+		A63F763822AC548200B4EE05 /* CLI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CLI.entitlements; sourceTree = "<group>"; };
 		A6953C4E226CC949001E8837 /* emporter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = emporter; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6953C51226CC949001E8837 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6953C78226CC975001E8837 /* EmporterKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmporterKit.xcodeproj; path = EmporterKit/EmporterKit.xcodeproj; sourceTree = "<group>"; };
@@ -306,6 +307,7 @@
 		A6D813CC2282D3B30092FE4C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A63F763822AC548200B4EE05 /* CLI.entitlements */,
 				A6D813D12282D3D10092FE4C /* EMProcessNode.h */,
 				A6D813D22282D3D10092FE4C /* EMProcessNode.m */,
 				A6D813D52282D3F80092FE4C /* EMCodeSignature.h */,
@@ -687,10 +689,11 @@
 		A6953C56226CC949001E8837 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/emporter-cli/Support/CLI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = EEQTQC5N2L;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -712,10 +715,11 @@
 		A6953C57226CC949001E8837 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/emporter-cli/Support/CLI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = EEQTQC5N2L;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
